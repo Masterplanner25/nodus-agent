@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nodus-agent"
+version = "0.1.0"
+description = "Full AI agent execution lifecycle: plan, approve, execute, guardrails, capability tokens"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Masterplanner25" }]
+dependencies = [
+  "nodus-llm>=0.1.0", "nodus-memory>=0.1.0", "nodus-events>=0.1.0",
+  "nodus-retry>=0.1.0", "nodus-state>=0.1.0", "nodus-mcp>=0.1.0",
+  "nodus-a2a>=0.1.0", "nodus-approvals>=0.1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0", "pytest-asyncio>=0.21"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nodus_agent*"]
