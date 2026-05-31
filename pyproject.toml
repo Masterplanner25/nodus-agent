@@ -6,18 +6,22 @@ build-backend = "setuptools.build_meta"
 name = "nodus-agent"
 version = "0.1.0"
 description = "Full AI agent execution lifecycle: plan, approve, execute, guardrails, capability tokens"
+authors = [{ name = "Shawn Knight" }]
+license = { text = "MIT" }
+readme = "README.md"
 requires-python = ">=3.11"
-license = "MIT"
-authors = [{ name = "Masterplanner25" }]
-dependencies = [
-  "nodus-llm>=0.1.0", "nodus-memory>=0.1.0", "nodus-events>=0.1.0",
-  "nodus-retry>=0.1.0", "nodus-state>=0.1.0", "nodus-mcp>=0.1.0",
-  "nodus-a2a>=0.1.0", "nodus-approvals>=0.1.0",
-]
+dependencies = []
 
 [project.optional-dependencies]
-test = ["pytest>=8.0", "pytest-asyncio>=0.21"]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/Masterplanner25/nodus-agent"
+Repository = "https://github.com/Masterplanner25/nodus-agent"
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["nodus_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
