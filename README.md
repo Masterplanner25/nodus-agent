@@ -7,7 +7,7 @@ tokens, duplicate-submission guardrails, and a pluggable planner backend.
 No required external dependencies — all integrations (LLM client, memory,
 events, approvals) are injected at construction time.
 
-> **Status:** v0.1.0 — prepared, not yet published.
+> **Status:** v0.1.0 — published on [PyPI](https://pypi.org/project/nodus-agent/).
 
 ---
 
